@@ -70,8 +70,19 @@ _SHORT_COMPANY_NAME = 'OmahaCompanyName'
 _PRODUCT_NAME = 'Update'
 _COMPANY_DOMAIN_BASE = 'google'
 _COMPANY_DOMAIN = _COMPANY_DOMAIN_BASE + '.com'
-_SERVICE_DOMAIN = os.getenv('SERVICE_DOMAIN', "update.googleapis.com")
 _MAIN_EXE_BASE_NAME = 'GoogleUpdate'
+
+# Optionals defines.
+# The following values can be used to override Omaha's default URLs used
+# to communicate with the various services endpoint.
+_MAIN_COMPANY_WEBSITE = os.getenv('OMAHA_MAIN_COMPANY_WEBSITE')
+_PLUGIN_DOMAIN = os.getenv('OMAHA_PLUGIN_DOMAIN')
+_UPDATE_CHECK_URL = os.getenv('OMAHA_UPDATE_CHECK_URL')
+_PING_URL = os.getenv('OMAHA_PING_URL')
+_CRASH_REPORT_URL = os.getenv('OMAHA_CRASH_REPORT_URL')
+_MORE_INFO_URL = os.getenv('OMAHA_MORE_INFO_URL')
+_CODE_RED_CHECK_URL = os.getenv('OMAHA_CODE_RED_CHECK_URL')
+_USAGE_STATS_REPORT_URL = os.getenv('OMAHA_USAGE_STATS_REPORT_URL')
 
 # TODO(omaha): Use this throughout the build files where goopdate and
 # goopdateres are referenced.
@@ -563,7 +574,6 @@ win_env.AppendUnique(
         'PRODUCT_NAME_ANSI=\\"%s\\"' % _PRODUCT_NAME,
         'COMPANY_DOMAIN_BASE_ANSI=\\"%s\\"' % _COMPANY_DOMAIN_BASE,
         'COMPANY_DOMAIN_ANSI=\\"%s\\"' % _COMPANY_DOMAIN,
-        'SERVICE_DOMAIN_ANSI=\\"%s\\"' % _SERVICE_DOMAIN,
         'OMAHA_APP_NAME_ANSI=\\"%s %s\\"' % (
             _SHORT_COMPANY_NAME, _PRODUCT_NAME),
         'MAIN_EXE_BASE_NAME_ANSI=\\"%s\\"' % _MAIN_EXE_BASE_NAME,
@@ -632,6 +642,38 @@ win_env.AppendUnique(
             _OMAHA_COPYRIGHT_STRING_ENGLISH),
         ],
 )
+if _MAIN_COMPANY_WEBSITE:
+    win_env.AppendUnique(CPPDEFINES = [
+        'MAIN_COMPANY_WEBSITE_ANSI=\\"%s\\"' % _MAIN_COMPANY_WEBSITE,
+    ])
+if _PLUGIN_DOMAIN:
+    win_env.AppendUnique(CPPDEFINES = [
+        'PLUGIN_DOMAIN_ANSI=\\"%s\\"' % _PLUGIN_DOMAIN,
+    ])
+if _UPDATE_CHECK_URL:
+    win_env.AppendUnique(CPPDEFINES = [
+        'UPDATE_CHECK_URL_ANSI=\\"%s\\"' % _UPDATE_CHECK_URL,
+    ])
+if _PING_URL:
+    win_env.AppendUnique(CPPDEFINES = [
+        'PING_URL=\\"%s\\"' % _PING_URL,
+    ])
+if _CRASH_REPORT_URL:
+    win_env.AppendUnique(CPPDEFINES = [
+        'CRASH_REPORT_URL=\\"%s\\"' % _CRASH_REPORT_URL,
+    ])
+if _MORE_INFO_URL:
+    win_env.AppendUnique(CPPDEFINES = [
+        'MORE_INFO_URL=\\"%s\\"' % _MORE_INFO_URL,
+    ])
+if _CODE_RED_CHECK_URL:
+    win_env.AppendUnique(CPPDEFINES = [
+        'CODE_RED_CHECK_URL=\\"%s\\"' % _CODE_RED_CHECK_URL,
+    ])
+if _USAGE_STATS_REPORT_URL:
+    win_env.AppendUnique(CPPDEFINES = [
+        'USAGE_STATS_REPORT_URL=\\"%s\\"' % _USAGE_STATS_REPORT_URL,
+    ])
 
 if _is_google_update_build:
     win_env.AppendUnique(CPPPATH = [

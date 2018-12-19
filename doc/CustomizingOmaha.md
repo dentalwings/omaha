@@ -26,7 +26,7 @@ The following items **MUST** be changed before releasing a fork of Omaha.  Prefe
 
   * **`omaha\base\const_addresses.h`**
 
-> If necessary, modify the URLs that will be used for performing update checks and returning results to match your update server's implementation.
+> URLs can be defined as Environment variable (the full list can be found in the main scons build script). If necessary, modify the URLs that will be used for performing update checks and returning results to match your update server's implementation.
 
   * **`omaha\goopdate\omaha3_idl.idl`**
 
