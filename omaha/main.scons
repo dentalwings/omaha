@@ -70,7 +70,9 @@ _SHORT_COMPANY_NAME = 'OmahaCompanyName'
 _PRODUCT_NAME = 'Update'
 _COMPANY_DOMAIN_BASE = 'google'
 _COMPANY_DOMAIN = _COMPANY_DOMAIN_BASE + '.com'
+_SERVICE_DOMAIN = os.getenv('SERVICE_DOMAIN', "update.googleapis.com")
 _MAIN_EXE_BASE_NAME = 'GoogleUpdate'
+
 # TODO(omaha): Use this throughout the build files where goopdate and
 # goopdateres are referenced.
 _MAIN_DLL_BASE_NAME = 'goopdate'
@@ -561,6 +563,7 @@ win_env.AppendUnique(
         'PRODUCT_NAME_ANSI=\\"%s\\"' % _PRODUCT_NAME,
         'COMPANY_DOMAIN_BASE_ANSI=\\"%s\\"' % _COMPANY_DOMAIN_BASE,
         'COMPANY_DOMAIN_ANSI=\\"%s\\"' % _COMPANY_DOMAIN,
+        'SERVICE_DOMAIN_ANSI=\\"%s\\"' % _SERVICE_DOMAIN,
         'OMAHA_APP_NAME_ANSI=\\"%s %s\\"' % (
             _SHORT_COMPANY_NAME, _PRODUCT_NAME),
         'MAIN_EXE_BASE_NAME_ANSI=\\"%s\\"' % _MAIN_EXE_BASE_NAME,

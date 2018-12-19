@@ -66,6 +66,10 @@ const TCHAR* const kShortCompanyName = SHORT_COMPANY_NAME;
 // COMPANY_DOMAIN_ANSI = "google.com"
 #define COMPANY_DOMAIN _T(COMPANY_DOMAIN_ANSI)
 
+// Service domain name. Used for communication with update server.
+// SERVICE_DOMAIN_ANSI = "update.googleapis.com"
+#define SERVICE_DOMAIN _T(SERVICE_DOMAIN_ANSI)
+
 // Company's internal network DNS domain. Used for detecting internal users.
 // If the internal network uses a different domain than the public-facing
 // COMPANY_DOMAIN, this will need to be changed.

@@ -58,17 +58,17 @@ const TCHAR* const kGoopdateServer = _T("tools.") COMPANY_DOMAIN;
 // The channel for update checks is secured by using CUP to sign the messages.
 // It does not depend solely on https security in any case.
 const TCHAR* const kUrlUpdateCheck =
-    _T("https://update.") COMPANY_DOMAIN_BASE _T("apis.com/service/update2");
+    _T("https://") SERVICE_DOMAIN _T("/service/update2");
 
 // Pings.
 const TCHAR* const kUrlPing =
-  _T("https://update.") COMPANY_DOMAIN_BASE _T("apis.com/service/update2");
+    _T("https://") SERVICE_DOMAIN _T("/service/update2");
 
 // The urls below never fall back to http.
 //
 // Crash reports.
 const TCHAR* const kUrlCrashReport =
-    _T("https://clients2.") COMPANY_DOMAIN _T("/cr/report");
+    _T("https://") SERVICE_DOMAIN _T("/service/crash_report/");
 
 // More information url.
 // Must allow query parameters to be appended to it.
@@ -81,7 +81,7 @@ const TCHAR* const kUrlCodeRedCheck =
 
 // Usage stats url.
 const TCHAR* const kUrlUsageStatsReport =
-    _T("https://clients5.") COMPANY_DOMAIN _T("/tbproxy/usagestats");
+    _T("https://") SERVICE_DOMAIN  _T("/tbproxy/usagestats");
 
 }  // namespace omaha
 
