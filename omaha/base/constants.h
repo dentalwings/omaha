@@ -66,6 +66,66 @@ const TCHAR* const kShortCompanyName = SHORT_COMPANY_NAME;
 // COMPANY_DOMAIN_ANSI = "google.com"
 #define COMPANY_DOMAIN _T(COMPANY_DOMAIN_ANSI)
 
+// Static string that gives the main Google website address
+#ifdef MAIN_COMPANY_WEBSITE_ANSI
+#define MAIN_COMPANY_WEBSITE _T(MAIN_COMPANY_WEBSITE_ANSI)
+#else
+#define MAIN_COMPANY_WEBSITE _T("www.") COMPANY_DOMAIN
+#endif
+
+// Static string used as an identity for the "Omaha" plug-in domain.
+#ifdef PLUGIN_DOMAIN_ANSI
+#define PLUGIN_DOMAIN _T(PLUGIN_DOMAIN_ANSI)
+#else
+#define PLUGIN_DOMAIN _T("tools.") COMPANY_DOMAIN
+#endif
+
+// Update checks.
+#ifdef UPDATE_CHECK_URL_ANSI
+#define UPDATE_CHECK_URL _T(UPDATE_CHECK_URL_ANSI)
+#else
+#define UPDATE_CHECK_URL _T("https://update.") COMPANY_DOMAIN_BASE _T("apis.com/service/update2")
+#endif
+
+// Pings.
+#ifdef PING_URL_ANSI
+#define PING_URL _T(PING_URL_ANSI)
+#else
+#define PING_URL _T("https://update.") COMPANY_DOMAIN_BASE _T("apis.com/service/update2")
+#endif
+
+// Crash reports.
+#ifdef CRASH_REPORT_URL_ANSI
+#define CRASH_REPORT_URL _T(CRASH_REPORT_URL_ANSI)
+#else
+#define CRASH_REPORT_URL _T("https://clients2.") COMPANY_DOMAIN _T("/cr/report")
+#endif
+
+// More information url.
+#ifdef MORE_INFO_URL_ANSI
+#define MORE_INFO_URL _T(MORE_INFO_URL_ANSI)
+#else
+#define MORE_INFO_URL _T("https://www.") COMPANY_DOMAIN _T("/support/installer/?")
+#endif
+
+// Code Red check url.
+#ifdef CODE_RED_CHECK_URL_ANSI
+#define CODE_RED_CHECK_URL _T(CODE_RED_CHECK_URL_ANSI)
+#else
+#define CODE_RED_CHECK_URL _T("https://clients2.") COMPANY_DOMAIN _T("/service/check2")
+#endif
+
+//  Usage stats url.
+#ifdef USAGE_STATS_REPORT_URL_ANSI
+#define USAGE_STATS_REPORT_URL _T(USAGE_STATS_REPORT_URL_ANSI)
+#else
+#define USAGE_STATS_REPORT_URL _T("https://") SERVICE_DOMAIN  _T("/tbproxy/usagestats")
+#endif
+
+// Service domain name. Used for communication with update server.
+// SERVICE_DOMAIN_ANSI = "update.googleapis.com"
+#define SERVICE_DOMAIN _T(SERVICE_DOMAIN_ANSI)
+
 // Company's internal network DNS domain. Used for detecting internal users.
 // If the internal network uses a different domain than the public-facing
 // COMPANY_DOMAIN, this will need to be changed.

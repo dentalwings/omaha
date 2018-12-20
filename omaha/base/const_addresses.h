@@ -29,11 +29,11 @@ namespace omaha {
 // Static string that gives the main Google website address
 // TODO(omaha): Rename this as a connection-check URL. Name should be in caps
 // and not include "Google".
-#define kGoogleHttpServer _T("www.") COMPANY_DOMAIN
+#define kGoogleHttpServer MAIN_COMPANY_WEBSITE
 
 // Static string used as an identity for the "Omaha" Google domain.
 // TODO(omaha): Rename this as a plug-in domain.
-const TCHAR* const kGoopdateServer = _T("tools.") COMPANY_DOMAIN;
+const TCHAR* const kGoopdateServer = PLUGIN_DOMAIN;
 
 // HTTP protocol prefix
 #define kProtoSuffix              _T("://")
@@ -57,31 +57,25 @@ const TCHAR* const kGoopdateServer = _T("tools.") COMPANY_DOMAIN;
 // Update checks.
 // The channel for update checks is secured by using CUP to sign the messages.
 // It does not depend solely on https security in any case.
-const TCHAR* const kUrlUpdateCheck =
-    _T("https://update.") COMPANY_DOMAIN_BASE _T("apis.com/service/update2");
+const TCHAR* const kUrlUpdateCheck = UPDATE_CHECK_URL;
 
 // Pings.
-const TCHAR* const kUrlPing =
-  _T("https://update.") COMPANY_DOMAIN_BASE _T("apis.com/service/update2");
+const TCHAR* const kUrlPing = PING_URL;
 
 // The urls below never fall back to http.
 //
 // Crash reports.
-const TCHAR* const kUrlCrashReport =
-    _T("https://clients2.") COMPANY_DOMAIN _T("/cr/report");
+const TCHAR* const kUrlCrashReport = CRASH_REPORT_URL;
 
 // More information url.
 // Must allow query parameters to be appended to it.
-const TCHAR* const kUrlMoreInfo =
-    _T("https://www.") COMPANY_DOMAIN _T("/support/installer/?");
+const TCHAR* const kUrlMoreInfo = MORE_INFO_URL;
 
 // Code Red check url.
-const TCHAR* const kUrlCodeRedCheck =
-    _T("https://clients2.") COMPANY_DOMAIN _T("/service/check2");
+const TCHAR* const kUrlCodeRedCheck = CODE_RED_CHECK_URL;
 
 // Usage stats url.
-const TCHAR* const kUrlUsageStatsReport =
-    _T("https://clients5.") COMPANY_DOMAIN _T("/tbproxy/usagestats");
+const TCHAR* const kUrlUsageStatsReport = USAGE_STATS_REPORT_URL;
 
 }  // namespace omaha
 
