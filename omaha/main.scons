@@ -180,6 +180,9 @@ win_env.AppendENVPath('PATH', os.getenv('OMAHA_NETFX_TOOLS_DIR'))
 # in shlwapi.h in the Vista SDK
 win_env.FilterOut(CPPDEFINES = ['OS_WINDOWS=OS_WINDOWS'])
 
+# from https://stackoverflow.com/questions/39483221/google-omaha-build-error
+win_env.AppendENVPath('PATH', (_sdk_dir + '\\bin\\' + _sdk_version + '\\x86'))
+
 # We pre-generate our own manifests, so make sure hammer does not generate
 # default ones for us
 del win_env['MANIFEST_FILE']
