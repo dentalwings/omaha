@@ -65,12 +65,12 @@ _is_google_update_build = False
 # These values must be changed when customizing open source Omaha.
 # You may also wish to replace the language-neutral constants in the individual
 # *generated_resources_*.rc files with localized strings.
-_FULL_COMPANY_NAME = 'OmahaCompanyName Inc.'
-_SHORT_COMPANY_NAME = 'OmahaCompanyName'
+_FULL_COMPANY_NAME = 'Dental Wings Inc.'
+_SHORT_COMPANY_NAME = 'DW'
 _PRODUCT_NAME = 'Update'
-_COMPANY_DOMAIN_BASE = 'google'
+_COMPANY_DOMAIN_BASE = 'dwos'
 _COMPANY_DOMAIN = _COMPANY_DOMAIN_BASE + '.com'
-_MAIN_EXE_BASE_NAME = 'GoogleUpdate'
+_MAIN_EXE_BASE_NAME = 'DWUpdate'
 
 # Optionals defines.
 # The following values can be used to override Omaha's default URLs used
@@ -86,7 +86,7 @@ _USAGE_STATS_REPORT_URL = os.getenv('OMAHA_USAGE_STATS_REPORT_URL')
 
 # TODO(omaha): Use this throughout the build files where goopdate and
 # goopdateres are referenced.
-_MAIN_DLL_BASE_NAME = 'goopdate'
+_MAIN_DLL_BASE_NAME = 'dwupdate'
 # "Google Inc." must not be removed from the copyright string. This literal also
 # appears as LegalCopyright in the VERSIONINFO section of .rc files.
 # TODO(omaha): Use this variable in .wxs files, etc.
@@ -659,23 +659,23 @@ if _UPDATE_CHECK_URL:
     ])
 if _PING_URL:
     win_env.AppendUnique(CPPDEFINES = [
-        'PING_URL=\\"%s\\"' % _PING_URL,
+        'PING_URL_ANSI=\\"%s\\"' % _PING_URL,
     ])
 if _CRASH_REPORT_URL:
     win_env.AppendUnique(CPPDEFINES = [
-        'CRASH_REPORT_URL=\\"%s\\"' % _CRASH_REPORT_URL,
+        'CRASH_REPORT_URL_ANSI=\\"%s\\"' % _CRASH_REPORT_URL,
     ])
 if _MORE_INFO_URL:
     win_env.AppendUnique(CPPDEFINES = [
-        'MORE_INFO_URL=\\"%s\\"' % _MORE_INFO_URL,
+        'MORE_INFO_URL_ANSI=\\"%s\\"' % _MORE_INFO_URL,
     ])
 if _CODE_RED_CHECK_URL:
     win_env.AppendUnique(CPPDEFINES = [
-        'CODE_RED_CHECK_URL=\\"%s\\"' % _CODE_RED_CHECK_URL,
+        'CODE_RED_CHECK_URL_ANSI=\\"%s\\"' % _CODE_RED_CHECK_URL,
     ])
 if _USAGE_STATS_REPORT_URL:
     win_env.AppendUnique(CPPDEFINES = [
-        'USAGE_STATS_REPORT_URL=\\"%s\\"' % _USAGE_STATS_REPORT_URL,
+        'USAGE_STATS_REPORT_URL_ANSI=\\"%s\\"' % _USAGE_STATS_REPORT_URL,
     ])
 
 if _is_google_update_build:
