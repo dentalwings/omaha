@@ -1,5 +1,8 @@
 @echo off
 
+call env.bat
+call "%VS140COMNTOOLS%..\..\VC\vcvarsall.bat"
+
 :: Hammer does not need this variable but the unit
 :: tests do.
 set OMAHA_PSEXEC_DIR=%ProgramFiles(x86)%\pstools
@@ -37,7 +40,7 @@ goto set_env_variables
 set GOROOT=C:\go
 
 :: Directory where AtlServer files are.
-set OMAHA_ATL_SERVER_DIR=c:\atl_server\files
+set OMAHA_ATL_SERVER_DIR=C:\OmahaEnvironment\ATL
 
 :: This will depend on your OS. If this version of the .Net framework came with
 :: the OS, then set it to the framework directory
@@ -69,10 +72,10 @@ set OMAHA_PROTOBUF_SRC_DIR=C:\protobuf\src
 set OMAHA_PYTHON_DIR=C:\Python24
 
 :: Directory in WiX where candle.exe and light.exe are installed.
-set OMAHA_WIX_DIR=%ProgramFiles(x86)%\WiX Toolset v3.10\bin
+set OMAHA_WIX_DIR=%ProgramFiles(x86)%\WiX Toolset v3.11\bin
 
 :: Root directory of the WTL installation.
-set OMAHA_WTL_DIR=C:\wtl\files
+set OMAHA_WTL_DIR=C:\OmahaEnvironment\WTL
 
 set OMAHA_PLATFORM_SDK_DIR=%WindowsSdkDir%\
 set OMAHA_WINDOWS_SDK_10_0_VERSION=%WindowsSDKVersion:~0,-1%
@@ -85,7 +88,7 @@ set PYTHONPATH=%OMAHA_PYTHON_DIR%
 set SCONS_DIR=C:\Python24\Lib\site-packages\scons-1.3.1
 
 :: Directory of the Google's Software Construction Toolkit.
-set SCT_DIR=C:\swtoolkit
+set SCT_DIR=C:\OmahaEnvironment\SWT
 
 set PROXY_CLSID_TARGET=%~dp0proxy_clsids.txt
 set CUSTOMIZATION_UT_TARGET=%~dp0common\omaha_customization_proxy_clsid.h
