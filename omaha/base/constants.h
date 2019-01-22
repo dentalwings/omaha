@@ -119,12 +119,8 @@ const TCHAR* const kShortCompanyName = SHORT_COMPANY_NAME;
 #ifdef USAGE_STATS_REPORT_URL_ANSI
 #define USAGE_STATS_REPORT_URL _T(USAGE_STATS_REPORT_URL_ANSI)
 #else
-#define USAGE_STATS_REPORT_URL _T("https://") SERVICE_DOMAIN  _T("/tbproxy/usagestats")
+#define USAGE_STATS_REPORT_URL _T("https://clients5.") COMPANY_DOMAIN _T("/tbproxy/usagestats")
 #endif
-
-// Service domain name. Used for communication with update server.
-// SERVICE_DOMAIN_ANSI = "update.googleapis.com"
-#define SERVICE_DOMAIN _T(SERVICE_DOMAIN_ANSI)
 
 // Company's internal network DNS domain. Used for detecting internal users.
 // If the internal network uses a different domain than the public-facing
