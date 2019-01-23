@@ -76,6 +76,7 @@ set OMAHA_PROTOBUF_SRC_DIR=C:\protobuf\src
 
 :: Directory where Python (python.exe) is installed.
 set OMAHA_PYTHON_DIR=C:\Python24
+set PATH=%PATH%;%OMAHA_PYTHON_DIR%
 
 :: Directory in WiX where candle.exe and light.exe are installed.
 set OMAHA_WIX_DIR=%ProgramFiles(x86)%\WiX Toolset v3.11\bin
