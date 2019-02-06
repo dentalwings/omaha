@@ -154,7 +154,7 @@ bool IsBuildSystem();
 // Sets TestSource=buildsystem.
 void SetBuildSystemTestSource();
 
-// Terminates all processes named GoogleUpdate.exe or GoogleCrashHandler.exe.
+// Terminates all processes named DentalWingsUpdate.exe or GoogleCrashHandler.exe.
 void TerminateAllGoogleUpdateProcesses();
 
 // Launches a process and returns its handle.

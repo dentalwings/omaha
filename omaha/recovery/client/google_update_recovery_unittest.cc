@@ -917,7 +917,7 @@ TEST_F(GoogleUpdateRecoveryTest, VerifyRepairFileMarkup_InvalidMarkups) {
   EXPECT_EQ(HRESULT_FROM_WIN32(ERROR_RESOURCE_DATA_NOT_FOUND),
             VerifyRepairFileMarkup(MakeTestFilepath(kNoResourcesExecutable)));
 
-  const TCHAR kResourcesButNoMarkupExecutable[] = _T("GoogleUpdate.exe");
+  const TCHAR kResourcesButNoMarkupExecutable[] = _T("DentalWingsUpdate.exe");
   EXPECT_EQ(HRESULT_FROM_WIN32(ERROR_RESOURCE_TYPE_NOT_FOUND),
             VerifyRepairFileMarkup(MakeTestFilepath(
                 kResourcesButNoMarkupExecutable)));

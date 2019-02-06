@@ -1106,7 +1106,7 @@ TEST_F(GoopdateUtilsRegistryProtectedWithMachineFolderPathsTest,
   CString program_files_path;
   EXPECT_SUCCEEDED(GetFolderPath(CSIDL_PROGRAM_FILES, &program_files_path));
   EXPECT_STREQ(program_files_path + _T("\\") + SHORT_COMPANY_NAME +
-               _T("\\") + PRODUCT_NAME + _T("\\GoogleUpdate.exe"),
+               _T("\\") + PRODUCT_NAME + _T("\\DentalWingsUpdate.exe"),
                path);
 }
 
@@ -1117,14 +1117,14 @@ TEST_F(GoopdateUtilsRegistryProtectedWithMachineFolderPathsTest,
   CString program_files_path;
   EXPECT_SUCCEEDED(GetFolderPath(CSIDL_PROGRAM_FILES, &program_files_path));
   EXPECT_STREQ(program_files_path + _T("\\") + SHORT_COMPANY_NAME +
-               _T("\\") + PRODUCT_NAME + _T("\\GoogleUpdate.exe"),
+               _T("\\") + PRODUCT_NAME + _T("\\DentalWingsUpdate.exe"),
                path);
 
   // Test when the key exists but the value doesn't.
   ASSERT_SUCCEEDED(RegKey::CreateKey(MACHINE_REG_CLIENTS_GOOPDATE));
   path = BuildGoogleUpdateExePath(true);
   EXPECT_STREQ(program_files_path + _T("\\") + SHORT_COMPANY_NAME +
-               _T("\\") + PRODUCT_NAME + _T("\\GoogleUpdate.exe"),
+               _T("\\") + PRODUCT_NAME + _T("\\DentalWingsUpdate.exe"),
                path);
 }
 
@@ -1141,7 +1141,7 @@ TEST_F(GoopdateUtilsRegistryProtectedWithUserFolderPathsTest,
   EXPECT_SUCCEEDED(GetFolderPath(CSIDL_LOCAL_APPDATA, &user_appdata));
   CString expected_path;
   expected_path.Format(_T("%s\\") SHORT_COMPANY_NAME _T("\\")
-                       PRODUCT_NAME _T("\\GoogleUpdate.exe"),
+                       PRODUCT_NAME _T("\\DentalWingsUpdate.exe"),
                        user_appdata);
   EXPECT_STREQ(expected_path, path);
 }
@@ -1152,7 +1152,7 @@ TEST_F(GoopdateUtilsRegistryProtectedWithUserFolderPathsTest,
   EXPECT_SUCCEEDED(GetFolderPath(CSIDL_LOCAL_APPDATA, &user_appdata));
   CString expected_path;
   expected_path.Format(_T("%s\\") SHORT_COMPANY_NAME _T("\\")
-                       PRODUCT_NAME _T("\\GoogleUpdate.exe"),
+                       PRODUCT_NAME _T("\\DentalWingsUpdate.exe"),
                        user_appdata);
 
   // Test when the key doesn't exist.
@@ -1166,7 +1166,7 @@ TEST_F(GoopdateUtilsRegistryProtectedWithUserFolderPathsTest,
 }
 
 // The version is no longer used by StartGoogleUpdateWithArgs, so the return
-// value depends on whether program_files\Google\Update\GoogleUpdate.exe exists.
+// value depends on whether program_files\Google\Update\DentalWingsUpdate.exe exists.
 // The arguments must be valid to avoid displaying invalid command line error.
 TEST_F(GoopdateUtilsRegistryProtectedWithMachineFolderPathsTest,
        StartGoogleUpdateWithArgs_MachineVersionVersionDoesNotExist) {
@@ -1179,7 +1179,7 @@ TEST_F(GoopdateUtilsRegistryProtectedWithMachineFolderPathsTest,
 }
 
 // The version is no longer used by StartGoogleUpdateWithArgs, so the return
-// value depends on whether <user_folder>\Google\Update\GoogleUpdate.exe exists.
+// value depends on whether <user_folder>\Google\Update\DentalWingsUpdate.exe exists.
 // The arguments must be valid to avoid displaying invalid command line error.
 //
 // TODO(omaha): This test is disabled because StartGoogleUpdateWithArgs fails on
