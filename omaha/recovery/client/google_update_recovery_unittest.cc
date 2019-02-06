@@ -72,10 +72,10 @@ const TCHAR kFullUserOmahaMainKeyPath[] =
     _T("HKCU\\Software\\Google\\Update\\");
 const TCHAR kFullMachineOmahaClientKeyPath[] =
     _T("HKLM\\Software\\Google\\Update\\Clients\\")
-    _T("{430FD4D0-B729-4f61-AA34-91526481799D}");
+    _T("{DD13223F-AC0E-436E-B20D-85F7371A555D}");
 const TCHAR kFullUserOmahaClientKeyPath[] =
     _T("HKCU\\Software\\Google\\Update\\Clients\\")
-    _T("{430FD4D0-B729-4f61-AA34-91526481799D}");
+    _T("{DD13223F-AC0E-436E-B20D-85F7371A555D}");
 
 const HRESULT kDummyNoFileError = 0x80041234;
 

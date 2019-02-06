@@ -145,8 +145,8 @@ TEST(OmahaCustomizationTest, Constants_Certificate) {
 }
 
 TEST(OmahaCustomizationTest, Constants_OmahaAppId_String) {
-  EXPECT_STREQ(_T("{430FD4D0-B729-4F61-AA34-91526481799D}"), GOOPDATE_APP_ID);
-  EXPECT_STREQ(_T("{430FD4D0-B729-4F61-AA34-91526481799D}"),
+  EXPECT_STREQ(_T("{DD13223F-AC0E-436E-B20D-85F7371A555D}"), GOOPDATE_APP_ID);
+  EXPECT_STREQ(_T("{DD13223F-AC0E-436E-B20D-85F7371A555D}"),
                kGoogleUpdateAppId);
 }
 
@@ -155,7 +155,7 @@ TEST(OmahaCustomizationTest, Constants_OmahaAppId_GUID) {
       {0x430FD4D0, 0xB729, 0x4F61,
        {0xAA, 0x34, 0x91, 0x52, 0x64, 0x81, 0x79, 0x9D}};
   EXPECT_TRUE(::IsEqualGUID(kExpectedGoogleUpdateGuid, kGoopdateGuid));
-  EXPECT_STREQ(_T("{430FD4D0-B729-4F61-AA34-91526481799D}"),
+  EXPECT_STREQ(_T("{DD13223F-AC0E-436E-B20D-85F7371A555D}"),
                GuidToString(kGoopdateGuid));
 }
 
@@ -197,16 +197,16 @@ TEST(OmahaCustomizationTest, Constants_RegistryKeys) {
   EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\"), USER_REG_GOOGLE);
   EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\"), USER_REG_UPDATE);
   EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\"), USER_REG_CLIENTS);  // NOLINT
-  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\{430FD4D0-B729-4F61-AA34-91526481799D}"), USER_REG_CLIENTS_GOOPDATE);  // NOLINT
+  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), USER_REG_CLIENTS_GOOPDATE);  // NOLINT
   EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\"), USER_REG_CLIENT_STATE);  // NOLINT
-  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\{430FD4D0-B729-4F61-AA34-91526481799D}"), USER_REG_CLIENT_STATE_GOOPDATE);  // NOLINT
+  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), USER_REG_CLIENT_STATE_GOOPDATE);  // NOLINT
 
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\"), MACHINE_REG_GOOGLE);
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\"), MACHINE_REG_UPDATE);
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\"), MACHINE_REG_CLIENTS);  // NOLINT
-  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\{430FD4D0-B729-4F61-AA34-91526481799D}"), MACHINE_REG_CLIENTS_GOOPDATE);  // NOLINT
+  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), MACHINE_REG_CLIENTS_GOOPDATE);  // NOLINT
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\"), MACHINE_REG_CLIENT_STATE);  // NOLINT
-  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\{430FD4D0-B729-4F61-AA34-91526481799D}"), MACHINE_REG_CLIENT_STATE_GOOPDATE);  // NOLINT
+  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), MACHINE_REG_CLIENT_STATE_GOOPDATE);  // NOLINT
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientStateMedium\\"), MACHINE_REG_CLIENT_STATE_MEDIUM);  // NOLINT
 
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\UpdateDev\\"), MACHINE_REG_UPDATE_DEV);  // NOLINT
@@ -274,21 +274,21 @@ TEST(OmahaCustomizationTest, Constants_ObjectNames_Pipes) {
 }
 
 TEST(OmahaCustomizationTest, Constants_ObjectNames_MutexesAndEvents) {
-  EXPECT_STREQ(_T("{A9A86B93-B54E-4570-BE89-42418507707B}"), kSetupMutex);
-  EXPECT_STREQ(_T("{A0C1F415-D2CE-4ddc-9B48-14E56FD55162}"), kShutdownEvent);
-  EXPECT_STREQ(_T("{B5665124-2B19-40e2-A7BC-B44321E72C4B}"),
+  EXPECT_STREQ(_T("{A2AA3F1F-8DD9-4848-8335-54AAB70C64AF}"), kSetupMutex);
+  EXPECT_STREQ(_T("{66D8F6BF-5CB1-462E-97E3-8C66C2EA0D8E}"), kShutdownEvent);
+  EXPECT_STREQ(_T("{1B03DCC2-BB4F-4996-8FBA-DEB32F548ED3}"),
                kCoreSingleInstance);
-  EXPECT_STREQ(_T("{C4F406E5-F024-4e3f-89A7-D5AB7663C3CD}"),
+  EXPECT_STREQ(_T("{843BBDF5-3FB7-4216-BAB5-86731C6779D8}"),
                kCrashHandlerSingleInstance);
-  EXPECT_STREQ(_T("{D0BB2EF1-C183-4cdb-B218-040922092869}"),
+  EXPECT_STREQ(_T("{2B657C16-F507-4036-87A0-71D630E0C8DC}"),
                kUpdateAppsSingleInstance);
-  EXPECT_STREQ(_T("%s-{F707E94F-D66B-4525-AD84-B1DA87D6A971}"),
+  EXPECT_STREQ(_T("%s-{679F8D62-8081-47C8-A99B-8E13610B218D}"),
                kInstallAppSingleInstance);
-  EXPECT_STREQ(_T("{0A175FBE-AEEC-4fea-855A-2AA549A88846}"),
+  EXPECT_STREQ(_T("{0D06A8E9-0174-42BD-A3AC-452EC8B93188}"),
                kInstallManagerSerializer);
-  EXPECT_STREQ(_T("{C68009EA-1163-4498-8E93-D5C4E317D8CE}"),
+  EXPECT_STREQ(_T("{692ADF4D-9D3A-46EA-8ABB-77A96BCAFC6A}"),
                kMetricsSerializer);
-  EXPECT_STREQ(_T("{66CC0160-ABB3-4066-AE47-1CA6AD5065C8}"),
+  EXPECT_STREQ(_T("{BAF5A486-EBD3-460A-9F80-3E1B6054FF63}"),
                kRegistryAccessMutex);
 }
 
@@ -345,20 +345,20 @@ TEST(OmahaCustomizationTest, ConfigManager_RegistryKeys) {
   EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\"), cm.registry_clients(false));  // NOLINT
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\"), cm.registry_clients(true));  // NOLINT
 
-  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.user_registry_clients_goopdate());  // NOLINT
-  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.machine_registry_clients_goopdate());  // NOLINT
-  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.registry_clients_goopdate(false));  // NOLINT
-  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.registry_clients_goopdate(true));  // NOLINT
+  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.user_registry_clients_goopdate());  // NOLINT
+  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.machine_registry_clients_goopdate());  // NOLINT
+  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\Clients\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.registry_clients_goopdate(false));  // NOLINT
+  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\Clients\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.registry_clients_goopdate(true));  // NOLINT
 
   EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\"), cm.user_registry_client_state());  // NOLINT
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\"), cm.machine_registry_client_state());  // NOLINT
   EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\"), cm.registry_client_state(false));  // NOLINT
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\"), cm.registry_client_state(true));  // NOLINT
 
-  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.user_registry_client_state_goopdate());  // NOLINT
-  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.machine_registry_client_state_goopdate());  // NOLINT
-  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.registry_client_state_goopdate(false));  // NOLINT
-  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\{430FD4D0-B729-4F61-AA34-91526481799D}"), cm.registry_client_state_goopdate(true));  // NOLINT
+  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.user_registry_client_state_goopdate());  // NOLINT
+  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.machine_registry_client_state_goopdate());  // NOLINT
+  EXPECT_GU_STREQ(_T("HKCU\\Software\\Google\\Update\\ClientState\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.registry_client_state_goopdate(false));  // NOLINT
+  EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientState\\{DD13223F-AC0E-436E-B20D-85F7371A555D}"), cm.registry_client_state_goopdate(true));  // NOLINT
 
   EXPECT_GU_STREQ(_T("HKLM\\Software\\Google\\Update\\ClientStateMedium\\"), cm.machine_registry_client_state_medium());  // NOLINT
 

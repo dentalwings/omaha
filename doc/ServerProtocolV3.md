@@ -48,7 +48,7 @@ Versions are members of an ordered set. A version `A` is greater than a version 
 
 ## GUIDs ##
 The Omaha protocol deals with globally-unique identifiers in multiple places. For the purpose of the protocol, a GUID one of the following formats:
-  1. a 128-bit value, serialized as a string of hexadecimal digits as follows: "`{00000000-1111-2222-3333-444444444444}`" (e.g. "`{430FD4D0-B729-4F61-AA34-91526481799D}`").
+  1. a 128-bit value, serialized as a string of hexadecimal digits as follows: "`{00000000-1111-2222-3333-444444444444}`" (e.g. "`{DD13223F-AC0E-436E-B20D-85F7371A555D}`").
   1. A lowercase Mac bundle ID (for example `com.google.chrome`). This format is only allowed to identify a product.
 
 ## Counting Algorithms ##
@@ -538,7 +538,7 @@ None.
   * `arguments`:
   * `successurl`:
   * `terminateallbrowsers`:
-  * `successaction`:
+  * `onsuccess`:
 
 ##### Legal Child Elements #####
 None.
@@ -561,7 +561,7 @@ None.
   * `X-Goog-Update-Interactivity` -- Either 'fg' or 'bg' when present, 'fg' indicating a user-initiated foreground update. 'bg' indicates that the request is part of a background update. If the server is under extremely high load, it may use this to prioritize 'fg' requests over 'bg' requests.
   * `X-Goog-Update-AppId`  -- Indicates the apps associated with the request. Clients updating multiple apps should specify a comma-separated list of values.
   * `X-Goog-Update-Updater` -- Indicates the identity of the updater. This is the "updater" version string also present in the request; in the case of Omaha, prepend "Omaha-" to the version string.
-  
+
 ### Response Headers ###
   * `X-Retry-After` -- When present, a positive integral number of seconds during which the client MUST NOT contact the server again for background updates, including but not limited to retried attempts to connect to the server due to an unparseable response or apparent error. Clients MUST respect this header even if paired with non-successful HTTP response code. Servers SHOULD NOT send a value in excess of 86400 (24 hours), and clients SHOULD treat values greater than 86400 as 86400.
 
