@@ -111,7 +111,7 @@ google_core_inputs = [
 if core_env['msc_ver'] >= 1400:
   core_env['CCFLAGS'] += ['/GS-']
 
-exe_name = 'GoogleUpdateCore'
+exe_name = 'DentalWingsUpdateCore'
 
 unsigned_core = core_env.ComponentProgram(
     prog_name='%s_unsigned.exe' % exe_name,
@@ -124,4 +124,3 @@ signed_core = core_env.DualSignedBinary(
 )
 
 env.Replicate('$STAGING_DIR', signed_core)
-
