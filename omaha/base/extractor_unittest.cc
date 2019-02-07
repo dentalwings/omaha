@@ -30,7 +30,7 @@
 namespace omaha {
 
 const TCHAR kFilePath[] = _T(".");
-const TCHAR kFileName[] = _T("GoogleUpdateSetup_repair.exe");
+const TCHAR kFileName[] = _T("DentalWingsUpdateSetup_repair.exe");
 const char kTagString[] = "1234567890abcdefg";
 const char kAppendTagString[] = "..AppendedStr";
 
@@ -235,4 +235,3 @@ TEST(ApplyTagTest, InvalidCharsTest) {
 }
 
 }  // namespace omaha
-

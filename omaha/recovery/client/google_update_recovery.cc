@@ -404,7 +404,7 @@ HRESULT GetDownloadTargetPath(CString* download_target_path,
     download_target_path->Replace(_T(".tmp"), _T(".exe"));
   } else {
     // Try a static filename in the temp directory as a fallback.
-    *download_target_path = user_temp_dir + _T("GoogleUpdateSetup.exe");
+    *download_target_path = user_temp_dir + _T("DentalWingsUpdateSetup.exe");
     *temp_file_path = _T("");
   }
 
