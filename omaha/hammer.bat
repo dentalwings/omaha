@@ -88,7 +88,8 @@ set OMAHA_PLATFORM_SDK_DIR=%WindowsSdkDir%\
 set OMAHA_WINDOWS_SDK_10_0_VERSION=%WindowsSDKVersion:~0,-1%
 
 :: Directory which includes the sign.exe tool for Authenticode signing.
-set OMAHA_SIGNTOOL_SDK_DIR=%WindowsSdkDir%\bin\x86
+set OMAHA_SIGNTOOL_SDK_DIR=%WindowsSdkDir%\bin\%OMAHA_WINDOWS_SDK_10_0_VERSION%\x86
+
 set PYTHONPATH=%OMAHA_PYTHON_DIR%
 
 :: Directory of Scons (http://www.scons.org/).
