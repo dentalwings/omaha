@@ -230,8 +230,8 @@ TEST(CommandLineBuilder, BuildUpdateWithSessionId) {
 // The /update builder works when not used with DentalWingsUpdate.exe.
 TEST(CommandLineBuilder, BuildUpdateAndGetCommandLineWithNonGoogleUpdateExe) {
   CommandLineBuilder builder(COMMANDLINE_MODE_UPDATE);
-  CString cmd_line = builder.GetCommandLine(_T("C:\\GoogleUpdateSetup_en.exe"));
-  EXPECT_STREQ(_T("\"C:\\GoogleUpdateSetup_en.exe\" /update"), cmd_line);
+  CString cmd_line = builder.GetCommandLine(_T("C:\\DentalWingsUpdateSetup_en.exe"));
+  EXPECT_STREQ(_T("\"C:\\DentalWingsUpdateSetup_en.exe\" /update"), cmd_line);
 }
 
 // The /update builder should not be used with DentalWingsUpdate.exe directly.
@@ -520,4 +520,3 @@ TEST(CommandLineBuilder, BuildRegisterMsiHelper) {
 }
 
 }  // namespace omaha
-

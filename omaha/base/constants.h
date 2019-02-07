@@ -184,7 +184,7 @@ const TCHAR* const kPSFileNameUser     = _T("psuser.dll");
 const TCHAR* const kPSFileNameUser64   = _T("psuser_64.dll");
 
 // TODO(omaha): Replace the following literal in clickonce\build.scons.
-// '%s/GoogleUpdateSetup.exe'
+// '%s/DentalWingsUpdateSetup.exe'
 
 // These must be in sync with the WiX files.
 // TODO(omaha): Make these constants in main.scons and use them in the .wxs
