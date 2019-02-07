@@ -67,7 +67,7 @@ _is_google_update_build = False
 # *generated_resources_*.rc files with localized strings.
 _FULL_COMPANY_NAME = 'Dental Wings Inc.'
 _SHORT_COMPANY_NAME = 'DW'
-_PRODUCT_NAME = 'Update'
+_PRODUCT_NAME = 'DentalWingsUpdate'
 _COMPANY_DOMAIN_BASE = 'dwos'
 _COMPANY_DOMAIN = _COMPANY_DOMAIN_BASE + '.com'
 _MAIN_EXE_BASE_NAME = 'DentalWingsUpdate'

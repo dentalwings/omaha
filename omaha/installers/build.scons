@@ -118,7 +118,7 @@ def _GenerateDeploymentForOneLanguage(omaha_version_info, language):
 
 def _BuildSetup(omaha_versions_info, is_repair = False):
   # Build the meta-installer for each version.
-  _PRODUCT_NAME = 'GoogleUpdate'
+  _PRODUCT_NAME = 'DentalWingsUpdate'
 
   for omaha_version_info in omaha_versions_info:
     prefix = omaha_version_info.filename_prefix
@@ -227,5 +227,3 @@ if not env.Bit('official_installers'):
       ]
 
   dll_env.ComponentLibrary(_RECOVERY_MARKUP_DLL_BASE_NAME, dll_inputs)
-
-
