@@ -20,7 +20,7 @@
 _ONECLICK_PLUGIN_NAME = 'npGoogleOneClick'
 _UPDATE_PLUGIN_NAME = 'npGoogleUpdate'
 _BHO_NAME = 'GoopdateBho'
-_CRASH_HANDLER_NAME = 'GoogleCrashHandler'
+_CRASH_HANDLER_NAME = 'DentalWingsCrashHandler'
 
 # List of languages that are fully supported in the current build.
 _OMAHA_LANGUAGES = [
@@ -130,11 +130,11 @@ def _GetMetainstallerPayloadFilenames(prefix,
       '%sgoopdate.dll' % (prefix),
       plugin_dll_name,
       bho_dll_name,
-      'GoogleUpdateHelper.msi',
-      'GoogleUpdateBroker.exe',
-      'GoogleUpdateOnDemand.exe',
-      'GoogleUpdateComRegisterShell64.exe',
-      'GoogleUpdateWebPlugin.exe',
+      'DentalWingsUpdateHelper.msi',
+      'DentalWingsUpdateBroker.exe',
+      'DentalWingsUpdateOnDemand.exe',
+      'DentalWingsUpdateComRegisterShell64.exe',
+      'DentalWingsUpdateWebPlugin.exe',
       '%spsmachine.dll' % (prefix),
       '%spsmachine_64.dll' % (prefix),
       '%spsuser.dll' % (prefix),
@@ -148,9 +148,9 @@ def _GetMetainstallerPayloadFilenames(prefix,
     payload_files.remove(bho_dll_name)
   elif _IsSupportedOmaha2Version(omaha_version):
     payload_files.remove(plugin_dll_name)
-    payload_files.remove('GoogleUpdateBroker.exe')
-    payload_files.remove('GoogleUpdateOnDemand.exe')
-    payload_files.remove('GoogleUpdateComRegisterShell64.exe')
+    payload_files.remove('DentalWingsUpdateBroker.exe')
+    payload_files.remove('DentalWingsUpdateOnDemand.exe')
+    payload_files.remove('DentalWingsUpdateComRegisterShell64.exe')
     payload_files.remove('psmachine.dll')
     payload_files.remove('psmachine_64.dll')
     payload_files.remove('psuser.dll')
@@ -170,7 +170,7 @@ def _GetMetainstallerPayloadFilenames(prefix,
       omaha_version[1] >= 3 and
       (omaha_version[2] >= 32)):
     # added with 1.3.32.1 and later
-    payload_files.append('GoogleUpdateCore.exe')
+    payload_files.append('DentalWingsUpdateCore.exe')
 
   for language in languages:
     payload_files += ['%sgoopdateres_%s.dll' % (prefix, language)]
@@ -375,4 +375,3 @@ class SignedFileInfo(object):
 
     self.unsigned_filename_base = '%s_unsigned' % base_name
     self.unsigned_filename = '%s.%s' % (self.unsigned_filename_base, extension)
-

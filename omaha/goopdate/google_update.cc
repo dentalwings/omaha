@@ -196,7 +196,7 @@ HRESULT RegisterOrUnregisterProxies32(bool is_machine, bool is_register) {
 
 // Register/unregister 64-bit proxy for 64-bit OS. We cannot directly load the
 // 64-bit DLL since Omaha is running in 32-bit mode. Fork a process and let
-// GoogleUpdateComRegisterShell64.exe do heavy lifting.
+// DentalWingsUpdateComRegisterShell64.exe do heavy lifting.
 HRESULT RegisterOrUnregisterProxies64(bool is_machine, bool is_register) {
   BOOL is64bit = FALSE;
   if (0 == Kernel32::IsWow64Process(GetCurrentProcess(), &is64bit) ||

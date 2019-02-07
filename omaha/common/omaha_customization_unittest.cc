@@ -132,7 +132,7 @@ TEST(OmahaCustomizationTest, Constants_Filenames) {
   EXPECT_STREQ(_T("GoogleUpdateOnDemand.exe"), kOmahaOnDemandFileName);
   EXPECT_STREQ(_T("GoogleUpdateWebPlugin.exe"), kOmahaWebPluginFileName);
   EXPECT_STREQ(_T("DentalWingsUpdateSetup.exe"), kOmahaMetainstallerFileName);
-  EXPECT_STREQ(_T("GoogleUpdateComRegisterShell64.exe"),
+  EXPECT_STREQ(_T("DentalWingsUpdateComRegisterShell64.exe"),
                kOmahaCOMRegisterShell64);
   EXPECT_STREQ(_T("psmachine.dll"), kPSFileNameMachine);
   EXPECT_STREQ(_T("psmachine_64.dll"), kPSFileNameMachine64);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
   <Product Id="A92DAB39-4E2C-4304-9AB6-BC44E68B55E2"
-    Name="Google Update Helper"
+    Name="DentalWings Update Helper"
     Language="1033"
     Codepage="1252"
     UpgradeCode="9515FFBD-40AB-4690-B983-4FA8E14EE7F5"
@@ -9,9 +9,9 @@
     Manufacturer="Google LLC">
 
     <Package Id="*"
-      Description="Google Update Helper"
-      Comments="Copyright 2018 Google LLC"
-      Manufacturer="Google LLC"
+      Description="DentalWings Update Helper"
+      Comments="Copyright 2018 Dental Wings Inc."
+      Manufacturer="Dental Wings Inc."
       Languages="1033"
       SummaryCodepage="1252"
       InstallerVersion="300"
@@ -23,7 +23,7 @@
 
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="ProgramFilesFolder">
-        <Directory Id="GoogleProgramDir" Name="OmahaCompanyName">
+        <Directory Id="GoogleProgramDir" Name="DW">
           <Directory Id="UpdateDir" Name="Update">
 
             <Component Id="MainComponent" Guid="717B7059-A988-492f-AF1B-DCF70BE809AB">

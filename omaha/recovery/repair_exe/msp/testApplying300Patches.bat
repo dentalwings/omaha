@@ -4,7 +4,7 @@ rem normally, only 127 patches can be applied to an msi
 
 set /A ii=0
 
-rem msiexec /i GoogleUpdateHelper.msi /qn
+rem msiexec /i DentalWingsUpdateHelper.msi /qn
 rem echo original product installed
 
 :repeat
