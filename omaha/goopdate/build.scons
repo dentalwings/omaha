@@ -49,7 +49,7 @@ def BuildCOMForwarder(cmd_line_switch,
           'shlwapi.lib',
       ],
   )
-  # The resource file used is the same as the one for GoogleUpdate.exe.
+  # The resource file used is the same as the one for DentalWingsUpdate.exe.
   # The version resource used is the same as the one for goopdate.dll.
   com_forwarder_res = com_forwarder_env.RES('%s.res' % signed_exe_name,
                                             '../google_update/resource.rc')
@@ -74,9 +74,9 @@ def BuildCOMForwarder(cmd_line_switch,
 
 
 # Build the broker/legacy on-demand/WebPlugin forwarders.
-BuildCOMForwarder('/broker', 'GoogleUpdateBroker', False)
-BuildCOMForwarder('/ondemand', 'GoogleUpdateOnDemand', False)
-BuildCOMForwarder('/pi', 'GoogleUpdateWebPlugin', True)
+BuildCOMForwarder('/broker', 'DentalWingsUpdateBroker', False)
+BuildCOMForwarder('/ondemand', 'DentalWingsUpdateOnDemand', False)
+BuildCOMForwarder('/pi', 'DentalWingsUpdateWebPlugin', True)
 
 def BuildCOMRegisterShell64():
   com_register_shell_env = env.CloneAndMake64Bit()
@@ -113,13 +113,13 @@ def BuildCOMRegisterShell64():
       ],
   )
   unsigned_exe = com_register_shell_env.ComponentProgram(
-      prog_name='GoogleUpdateComRegisterShell64_unsigned',
+      prog_name='DentalWingsUpdateComRegisterShell64_unsigned',
       source= [
           'com_register_shell.cc',
           ]
   )
   signed_exe = com_register_shell_env.DualSignedBinary(
-      target='GoogleUpdateComRegisterShell64.exe',
+      target='DentalWingsUpdateComRegisterShell64.exe',
       source=unsigned_exe,
   )
   env.Replicate('$STAGING_DIR', signed_exe)
@@ -571,4 +571,3 @@ signed_test_installer = test_installer_env.DualSignedBinary(
     source=unsigned_test_installer,
 )
 env.Replicate('$STAGING_DIR', signed_test_installer)
-

@@ -54,7 +54,7 @@ const TCHAR* const kRegValueProductVersion  = _T("pv");
 const TCHAR* const kRelativeGoopdateRegPath = _T("Software\\Google\\Update\\");
 const TCHAR* const kRelativeClientsGoopdateRegPath =
     _T("Software\\Google\\Update\\Clients\\")
-    _T("{430FD4D0-B729-4F61-AA34-91526481799D}");
+    _T("{DD13223F-AC0E-436E-B20D-85F7371A555D}");
 
 // The UpdateDev registry value to override the Code Red url.
 const TCHAR* const kRegValueNameCodeRedUrl = _T("CodeRedUrl");
@@ -404,7 +404,7 @@ HRESULT GetDownloadTargetPath(CString* download_target_path,
     download_target_path->Replace(_T(".tmp"), _T(".exe"));
   } else {
     // Try a static filename in the temp directory as a fallback.
-    *download_target_path = user_temp_dir + _T("GoogleUpdateSetup.exe");
+    *download_target_path = user_temp_dir + _T("DentalWingsUpdateSetup.exe");
     *temp_file_path = _T("");
   }
 

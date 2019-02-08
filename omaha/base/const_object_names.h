@@ -24,7 +24,7 @@
 namespace omaha {
 
 // The prefix to use for global names in the win32 API's.
-const TCHAR* const kGlobalPrefix = _T("Global\\Omaha");
+const TCHAR* const kGlobalPrefix = _T("Global\\DentalWings");
 
 const TCHAR* const kObjectName64Suffix = _T("-x64");
 
@@ -33,7 +33,7 @@ const TCHAR* const kCrashPipeNamePrefix =
 
 // Ensures that only one instance of machine or user Omaha is trying to setup at
 // a time.
-const TCHAR* const kSetupMutex = _T("{A9A86B93-B54E-4570-BE89-42418507707B}");
+const TCHAR* const kSetupMutex = _T("{A2AA3F1F-8DD9-4848-8335-54AAB70C64AF}");
 
 // TODO(omaha3): Update this comment.
 // Signals the process to exit. Currently the core and the worker listen to
@@ -41,7 +41,7 @@ const TCHAR* const kSetupMutex = _T("{A9A86B93-B54E-4570-BE89-42418507707B}");
 // TODO(omaha): Consider making all our processes listen to it. Maybe not the
 // service, since the SCM controls the life time of the service.
 const TCHAR* const kShutdownEvent =
-    _T("{A0C1F415-D2CE-4ddc-9B48-14E56FD55162}");
+    _T("{66D8F6BF-5CB1-462E-97E3-8C66C2EA0D8E}");
 
 // This is for Omaha2 backwards compatibility.
 // The installed Omaha3 handoff process sets an event to tell an Omaha2 setup
@@ -54,32 +54,32 @@ const TCHAR* const kLegacyUiDisplayedEventEnvironmentVariableName =
 // Ensures the Core only runs one instance per machine and one instance per
 // each user session.
 const TCHAR* const kCoreSingleInstance =
-    _T("{B5665124-2B19-40e2-A7BC-B44321E72C4B}");
+    _T("{1B03DCC2-BB4F-4996-8FBA-DEB32F548ED3}");
 
 // Ensures the Crash Handler only runs one instance per machine and one
 // instance per each user session.
 const TCHAR* const kCrashHandlerSingleInstance =
-    _T("{C4F406E5-F024-4e3f-89A7-D5AB7663C3CD}");
+    _T("{843BBDF5-3FB7-4216-BAB5-86731C6779D8}");
 
 // Ensures the /ua process only runs one instance per machine and one
 // instance per each user session.
 const TCHAR* const kUpdateAppsSingleInstance =
-    _T("{D0BB2EF1-C183-4cdb-B218-040922092869}");
+    _T("{2B657C16-F507-4036-87A0-71D630E0C8DC}");
 
 // Ensures only one installer for an app is running in a session.
 // The %s is replaced with the application ID.
 const TCHAR* const kInstallAppSingleInstance =
-    _T("%s-{F707E94F-D66B-4525-AD84-B1DA87D6A971}");
+    _T("%s-{679F8D62-8081-47C8-A99B-8E13610B218D}");
 
 // Ensures the GoogleUpdate3 server only runs one instance per machine and one
 // instance per each user session.
 const TCHAR* const kGoogleUpdate3SingleInstance =
-    _T("{6885AE8E-C070-458d-9711-37B9BEAB65F6}");
+    _T("{183A731E-7BEF-4D2C-8CB4-F4E340924121}");
 
 // Ensures the recovery probe only runs one instance per machine and one
 // instance per each user session.
 const TCHAR* const kRecoveryProbeSingleInstance =
-    _T("{223EEFB7-D9D4-45C7-99AC-47C0B52B411E}");
+    _T("{4DDF8E7D-95A9-4FB3-9D4A-40FCFA5DCA2E}");
 
 // TODO(omaha): Delete Job Object code.
 
@@ -87,36 +87,36 @@ const TCHAR* const kRecoveryProbeSingleInstance =
 // These may not be running as Local System for machine installs like
 // self-updates do.
 const TCHAR* const kSetupPhase1NonSelfUpdateJobObject =
-    _T("{5A913EF1-4160-48bc-B688-4D67EAEB698A}");
+    _T("{208A14FA-B5DB-422E-AD8D-23AFC69D96F7}");
 
 // Base name of job object for interactive install processes except /install.
 const TCHAR* const kAppInstallJobObject =
-    _T("{8AD051DB-4FE6-458b-B103-7DCC78D56013}");
+    _T("{2C91607B-E69E-4848-993C-FF093D3D390D}");
 
 // Base name of job object for silent processes that are okay to kill.
 const TCHAR* const kSilentJobObject =
-    _T("{A2300FD6-CBED-48a6-A3CB-B35C38A42F8E}");
+    _T("{6B88CB00-C615-4BBC-A79A-01B1A7239888}");
 
 // Base name of job object for silent processes that should not be killed.
 const TCHAR* const kSilentDoNotKillJobObject =
-    _T("{D33A8A53-F57D-4fd9-A32D-238FD69B4BC4}");
+    _T("{C35362E2-41E0-44D7-95E1-CDC5E1E073AA}");
 
 // The global lock to ensure that a single app is being installed for this
 // user/machine at a given time.
 const TCHAR* const kInstallManagerSerializer =
-    _T("{0A175FBE-AEEC-4fea-855A-2AA549A88846}");
+    _T("{0D06A8E9-0174-42BD-A3AC-452EC8B93188}");
 
 // Serializes access to metrics stores, machine and user, respectively.
 const TCHAR* const kMetricsSerializer =
-    _T("{C68009EA-1163-4498-8E93-D5C4E317D8CE}");
+    _T("{692ADF4D-9D3A-46EA-8ABB-77A96BCAFC6A}");
 
 // Serializes access to the registry for application state.
 const TCHAR* const kRegistryAccessMutex =
-    _T("{66CC0160-ABB3-4066-AE47-1CA6AD5065C8}");
+    _T("{BAF5A486-EBD3-460A-9F80-3E1B6054FF63}");
 
 // Serializes opt user id generation.
 const TCHAR* const kOptUserIdLock =
-    _T("{D19BAF17-7C87-467E-8D63-6C4B1C836373}");
+    _T("{675AC8CA-F07F-48E2-8BB3-F3D82D73AD76}");
 
 // Prefix used for programs with external (in-process) updaters to signal to
 // Omaha that they are currently doing an update check, and that Omaha should

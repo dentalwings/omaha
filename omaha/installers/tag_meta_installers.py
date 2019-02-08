@@ -18,7 +18,7 @@
 """Creates application specific meta-installers.
 
 Run this script with the directory that contains the build files,
-GoogleupdateSetup_<lang>.exe and pass it the file that contains the application
+DentalWingsUpdateSetup_<lang>.exe and pass it the file that contains the application
 information to be stamped inside the binary.
 
 """
@@ -110,8 +110,8 @@ def SetOutputFileNames(file_name, apps, output_dir):
     file_name: The input file name that needs to be stamped. This
                is used for deciding whether to use TEST in the name,
                and the directory. The names of this file is expected
-               to be either TEST_GoogleUpdateSetup.exe or
-               GoogleUpdateSetup.exe
+               to be either TEST_DentalWingsUpdateSetup.exe or
+               DentalWingsUpdateSetup.exe
     apps: Dictionary of applications keyed by language.
     output_dir: The output directory.
 
@@ -209,13 +209,13 @@ def GetAllSetupExeInDirectory(dir):
     dir: The input directory.
   Returns:
     A list of files that are match the regex:
-    TEST_GoogleUpdateSetup_.*.exe$|^GoogleUpdateSetup_.*.exe$
+    TEST_DentalWingsUpdateSetup_.*.exe$|^DentalWingsUpdateSetup_.*.exe$
   """
   ret_files = []
   files = os.listdir(dir)
   for file in files:
-    regex = re.compile('^TEST_GoogleUpdateSetup_.*.exe$|'
-                       '^GoogleUpdateSetup_.*.exe$')
+    regex = re.compile('^TEST_DentalWingsUpdateSetup_.*.exe$|'
+                       '^DentalWingsUpdateSetup_.*.exe$')
     if not regex.match(file):
       continue
     ret_files.append(file)

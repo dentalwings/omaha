@@ -72,10 +72,10 @@ const TCHAR kFullUserOmahaMainKeyPath[] =
     _T("HKCU\\Software\\Google\\Update\\");
 const TCHAR kFullMachineOmahaClientKeyPath[] =
     _T("HKLM\\Software\\Google\\Update\\Clients\\")
-    _T("{430FD4D0-B729-4f61-AA34-91526481799D}");
+    _T("{DD13223F-AC0E-436E-B20D-85F7371A555D}");
 const TCHAR kFullUserOmahaClientKeyPath[] =
     _T("HKCU\\Software\\Google\\Update\\Clients\\")
-    _T("{430FD4D0-B729-4f61-AA34-91526481799D}");
+    _T("{DD13223F-AC0E-436E-B20D-85F7371A555D}");
 
 const HRESULT kDummyNoFileError = 0x80041234;
 
@@ -917,7 +917,7 @@ TEST_F(GoogleUpdateRecoveryTest, VerifyRepairFileMarkup_InvalidMarkups) {
   EXPECT_EQ(HRESULT_FROM_WIN32(ERROR_RESOURCE_DATA_NOT_FOUND),
             VerifyRepairFileMarkup(MakeTestFilepath(kNoResourcesExecutable)));
 
-  const TCHAR kResourcesButNoMarkupExecutable[] = _T("GoogleUpdate.exe");
+  const TCHAR kResourcesButNoMarkupExecutable[] = _T("DentalWingsUpdate.exe");
   EXPECT_EQ(HRESULT_FROM_WIN32(ERROR_RESOURCE_TYPE_NOT_FOUND),
             VerifyRepairFileMarkup(MakeTestFilepath(
                 kResourcesButNoMarkupExecutable)));
