@@ -213,8 +213,8 @@ const TCHAR* const kTemporaryFilenamePrefix = _T("gup");
 // TODO(omaha): Rename all of these "Omaha".
 #define GOOPDATE_APP_ID _T("{DD13223F-AC0E-436E-B20D-85F7371A555D}")
 const TCHAR* const kGoogleUpdateAppId = GOOPDATE_APP_ID;
-const GUID kGoopdateGuid = {0x430FD4D0, 0xB729, 0x4F61,
-                            {0xAA, 0x34, 0x91, 0x52, 0x64, 0x81, 0x79, 0x9D}};
+const GUID kGoopdateGuid = {0xDD13223F, 0xAC0E, 0x436E,
+                            {0xB2, 0x0D, 0x85, 0xF7, 0x37, 0x1A, 0x55, 0x5D}};
 
 // Chrome AppIDs
 #define CHROME_APP_ID _T("{8A69D345-D564-463C-AFF1-A69D9E530F96}")
