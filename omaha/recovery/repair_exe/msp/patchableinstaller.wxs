@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <Product Id="A92DAB39-4E2C-4304-9AB6-BC44E68B55E2"
+  <Product Id="7E1E0758-17F6-4924-9AC6-63DD97406D7F"
     Name="DentalWings Update Helper"
     Language="1033"
     Codepage="1252"

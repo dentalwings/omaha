@@ -224,10 +224,10 @@ TEST(OmahaCustomizationTest, Constants_RegistryValues) {
 
 TEST(OmahaCustomizationTest, Constants_MsiMsp) {
   EXPECT_STREQ(_T("GoogleUpdateHelper.msi"), kHelperInstallerName);
-  EXPECT_STREQ(_T("{A92DAB39-4E2C-4304-9AB6-BC44E68B55E2}"),
+  EXPECT_STREQ(_T("{7E1E0758-17F6-4924-9AC6-63DD97406D7F}"),
                kHelperInstallerProductGuid);
   EXPECT_STREQ(_T("GoogleUpdateHelperPatch.msp"), kHelperPatchName);
-  EXPECT_STREQ(_T("{E0D0D2C9-5836-4023-AB1D-54EC3B90AD03}"), kHelperPatchGuid);
+  EXPECT_STREQ(_T("{75791684-1D4C-4423-B29B-825C71bE4A67}"), kHelperPatchGuid);
 }
 
 TEST(OmahaCustomizationTest, Constants_CompatibleMinimumOlderShellVersion) {
