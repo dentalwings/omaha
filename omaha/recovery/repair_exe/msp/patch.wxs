@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="Windows-1252"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-  <PatchCreation Id="E0D0D2C9-5836-4023-AB1D-54EC3B90AD03"
+  <PatchCreation Id="75791684-1D4C-4423-B29B-825C71bE4A67"
     AllowMajorVersionMismatches="no"
     AllowProductCodeMismatches="no"
     CleanWorkingFolder="yes"
@@ -34,6 +34,6 @@
       </UpgradeImage>
     </Family>
 
-    <TargetProductCode Id="A92DAB39-4E2C-4304-9AB6-BC44E68B55E2" />
+    <TargetProductCode Id="7E1E0758-17F6-4924-9AC6-63DD97406D7F" />
   </PatchCreation>
 </Wix>

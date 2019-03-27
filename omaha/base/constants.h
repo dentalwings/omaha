@@ -191,10 +191,10 @@ const TCHAR* const kPSFileNameUser64   = _T("psuser_64.dll");
 // files, kMsiUninstallKey, and elsewhere this GUID appears.
 const TCHAR* const kHelperInstallerName = MAIN_EXE_BASE_NAME _T("Helper.msi");
 const TCHAR* const kHelperInstallerProductGuid =
-    _T("{A92DAB39-4E2C-4304-9AB6-BC44E68B55E2}");
+    _T("{7E1E0758-17F6-4924-9AC6-63DD97406D7F}");
 const TCHAR* const kHelperPatchName = MAIN_EXE_BASE_NAME _T("HelperPatch.msp");
 const TCHAR* const kHelperPatchGuid =
-    _T("{E0D0D2C9-5836-4023-AB1D-54EC3B90AD03}");
+    _T("{75791684-1D4C-4423-B29B-825C71bE4A67}");
 
 // The value that is used in the run key.
 const TCHAR* const kRunValueName = kAppName;
