@@ -23,7 +23,7 @@ namespace omaha {
 
 namespace {
 
-const CString kPv = _T("1.3.117.0");
+const CString kPv = _T("1.3.119.0");
 const CString kLang = _T("en");
 const CString kBrandCode = _T("GOOG");
 const CString kClientId = _T("testclientid");
