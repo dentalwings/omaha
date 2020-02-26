@@ -18,7 +18,6 @@ BRANCH_OWNERS
 omaha/common/omaha_customization_proxy_clsid.h
 omaha/proxy_clsids.txt
 omaha/*.idb
-omaha/env.bat
 omaha/scons-out/**
 
 # Ignore compiled Python files.
