@@ -1,6 +1,5 @@
 @echo off
 
-call env.bat
 call "%VS140COMNTOOLS%..\..\VC\vcvarsall.bat"
 
 :: Hammer does not need this variable but the unit
